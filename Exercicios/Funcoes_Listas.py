@@ -1,10 +1,12 @@
 def ehPrimo(numero):
+    if numero <=0:
+        return False
     i = 2
     while i < numero:
         if numero % i == 0:
             return False
         i += 1
-        return True
+    return True
     
 inicio = int(input("Digite o início do intervalo: "))
 fim = int(input("Digite o fim do intervalo: "))
@@ -21,7 +23,6 @@ while numero <= fim:
         contador += 1
         if menorPrimo == 0:
             menorPrimo = numero
-
         maiorPrimo = numero
     numero += 1
 
